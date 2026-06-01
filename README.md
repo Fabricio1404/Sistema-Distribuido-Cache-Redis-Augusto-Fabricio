@@ -12,9 +12,9 @@ Implementación de un sistema distribuido en 4 máquinas virtuales Linux (Ubuntu
 
 | VMs | Rol | IP NAT | IP Interna | Puerto |
 |---|---|---|---|---|
-| VM3-Frontend | Servidor Web Apache | 10.0.2.15 | 192.168.56.10 | 8080 |
 | VM2-Backend | API REST Node.js/Express | 10.0.2.16 | 192.168.56.11 | 3000 |
-| VM1-BaseDatos | *(trabajo anterior — no se usa acá)* | 10.0.2.17 | 192.168.56.12 | — |
+| VM3-Frontend | Servidor Web Apache | 10.0.2.17 | 192.168.56.12 | 8080 |
+| VM1-BaseDatos | *(trabajo anterior — no se usa acá)* | 10.0.2.15 | 192.168.56.10 | — |
 | VM4-Cache | Redis | 10.0.2.18 | 192.168.56.13 | 6379 |
 
 ---
