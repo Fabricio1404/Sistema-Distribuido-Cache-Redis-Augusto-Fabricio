@@ -145,7 +145,7 @@ network:
   ethernets:
     enp0s3:
       addresses:
-        - 10.0.2.15/24
+        - 10.0.2.17/24
       routes:
         - to: default
           via: 10.0.2.2
@@ -154,7 +154,7 @@ network:
           - 8.8.8.8
     enp0s8:
       addresses:
-        - 192.168.56.10/24
+        - 192.168.56.12/24
 ```
 
 **VM2 - Backend:**
@@ -549,4 +549,4 @@ El modelo implementado es `y = 2x² + 5x + 3`. Para verificar manualmente:
 
 **Acceso:** `http://localhost:8080/Cuadratica`
 
-<img width="605" height="592" alt="Captura de pantalla 2026-06-01 115737" src="https://github.com/user-attachments/assets/06f9cde0-9a32-46a2-8ab2-c7da62e9e663" />
+<img width="605" height="592" alt="Captura de pantalla 2026-06-01 115737" src="https://github.com/user-attachments/assets/997e841d-7857-4f2c-b359-b0462f665fd1" />
