@@ -12,7 +12,7 @@ Implementación de un sistema distribuido en 4 máquinas virtuales Linux (Ubuntu
 
 | VMs | Rol | IP NAT | IP Interna | Puerto |
 |---|---|---|---|---|
-| VM1-Frontend | Servidor Web Apache | 10.0.2.15 | 192.168.56.10 | 8080 |
+| VM3-Frontend | Servidor Web Apache | 10.0.2.15 | 192.168.56.10 | 8080 |
 | VM2-Backend | API REST Node.js/Express | 10.0.2.16 | 192.168.56.11 | 3000 |
 | VM3-BaseDatos | *(trabajo anterior — no se usa acá)* | 10.0.2.17 | 192.168.56.12 | — |
 | VM4-Cache | Redis | 10.0.2.18 | 192.168.56.13 | 6379 |
@@ -83,7 +83,7 @@ Cada VM tiene 2 adaptadores de red:
 
 ### Reglas de Port Forwarding (NAT)
 
-**VM1 - Frontend:**
+**VM3 - Frontend:**
 
 | Nombre | Puerto Host | Puerto Invitado |
 |---|---|---|
@@ -138,7 +138,7 @@ En cada VM editar el archivo de red:
 sudo nano /etc/netplan/00-installer-config.yaml
 ```
 
-**VM1 - Frontend:**
+**VM3 - Frontend:**
 ```yaml
 network:
   version: 2
@@ -411,7 +411,7 @@ Resultado esperado: `active (running)`
 
 ---
 
-### FASE 5 — VM1: Servidor Frontend (Apache)
+### FASE 5 — VM3: Servidor Frontend (Apache)
 
 #### ¿Qué hace el frontend?
 
@@ -549,4 +549,4 @@ El modelo implementado es `y = 2x² + 5x + 3`. Para verificar manualmente:
 
 **Acceso:** `http://localhost:8080/Cuadratica`
 
-<img width="605" height="592" alt="Captura de pantalla 2026-06-01 115737" src="https://github.com/user-attachments/assets/4101e978-7b78-46f7-99e1-700953c65ff6" />
+<img width="605" height="592" alt="Captura de pantalla 2026-06-01 115737" src="https://github.com/user-attachments/assets/06f9cde0-9a32-46a2-8ab2-c7da62e9e663" />
